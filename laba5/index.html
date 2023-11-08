@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Заказ ремонта автомобилей</title>
+</head>
+
+<body bgcolor="rosybrown">
+  <h3>Запись на сервис</h3>
+  <form>
+    <fieldset>
+    <legend > Контактная информация</legend>
+    <input placeholder="Имя" type="text" id="search" name="search" required>
+    <br>
+    <input placeholder="Номер телефона" type="text" id="search" name="search" required>
+  </fieldset>
+  <fieldset>
+    <legend >Дата и время</legend>
+    <input  type="date" id="search" data="search" required>
+    <br>
+    <input  type="time" id="search" data="search" required>
+  </fieldset>
+    <br>
+    <fieldset>
+      <legend >Данные автомобиля</legend>
+      <input placeholder="VIN номер автомобиля" type="text" id="search" ll="search" required>
+      <br>
+      <select id="sort" name="sort" required>
+        <optgroup label="Вид обслуживания">
+        <option value="remont">Ремонт</option>
+        <option value="diagnostika">Диагностика</option>
+        <option value="pokraska">Покраска</option>
+        <option value="shinomontazh">Шиномонтаж</option>
+      </optgroup>
+      </select>
+    </fieldset>
+    <p><input type="submit"></p>
+  </form>
+  <style>
+    body{
+     margin:0 auto;
+    }
+  </style>
+</body>
+
+</html>
