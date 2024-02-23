@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>gey.by</title>
+</head>
+<body>
+    <h1 id="el1">11111</h1>
+    <h3 id="el2">22222</h3>
+    <button id="el3">Кнопочка</button><br><br>
+    <input type="text" id="el4"><br><br>
+    <img src="keks.jpg" alt="Картинка" id="el5" width="200" height="200">
+
+    <script>
+        function handleEvent(eventType, elementId) {
+            let element = document.getElementById(elementId);
+
+            element.addEventListener(eventType, function(event) {
+                alert("Событие '" + eventType + "' произошло для элемента с id: " + elementId);
+            });
+        }
+
+        let eventType = prompt("Введите тип события :");
+        let elementId = prompt("Введите id элемента, для которого хотите вызвать событие:");
+
+        handleEvent(eventType, elementId);
+    </script>
+</body>
+</html>
