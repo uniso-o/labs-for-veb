@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+table {
+  border-collapse: collapse;
+}
+
+th, td {
+  border: 1px solid white;
+  padding: 10px;
+  color: white;
+}
+tr {
+  background-color:  maroon;
+}
+th {
+  background-color:  maroon;
+}
+</style>
+<script>
+    document.write("Таблица")
+document.addEventListener("DOMContentLoaded", function(event) { 
+  let table = document.createElement("table");
+
+  let thead = document.createElement("thead");
+  let trHead = document.createElement("tr");
+  let th1 = document.createElement("th");
+  let th2 = document.createElement("th");
+  th1.textContent = "Заголовок 1";
+  th2.textContent = "Заголовок 2";
+
+  let tbody = document.createElement("tbody");
+  let tr1 = document.createElement("tr");
+  let td1 = document.createElement("td");
+  let td2 = document.createElement("td");
+ 
+  td1.textContent = "Ячейка 3";
+  td2.textContent = "Ячейка 4";
+  
+
+  trHead.appendChild(th1);
+  trHead.appendChild(th2);
+
+  tr1.appendChild(td1);
+  tr1.appendChild(td2);
+
+
+  thead.appendChild(trHead);
+  tbody.appendChild(tr1);
+  
+
+  table.appendChild(thead);
+  table.appendChild(tbody);
+
+  document.body.appendChild(table);
+});
+</script>
+</head>
+<body>
+</body>
+</html>

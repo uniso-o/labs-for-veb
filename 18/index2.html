@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>gey.by</title>
+    <style >
+      figure {
+  display: inline-block;
+  margin-right: 20px;
+  cursor: pointer;
+}
+
+.slider {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  overflow: hidden;
+}
+ 
+.slide {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  opacity: 0;
+  transition: opacity 1s;
+}
+ 
+.slide:first-child {
+  opacity: 1;
+}
+      </style>
+</head>
+
+<body>
+    <figure id="figure">
+        <img src="pictures/image1.jpg" alt="Image 1">
+        <figcaption>Картинка 1</figcaption>
+      </figure>
+
+      <div class="slider">
+        <img src="pictures/image1.jpg" alt="Изображение 1" class="slide">
+        <img src="pictures/image2.jpg" alt="Изображение 2" class="slide">
+        <img src="pictures/image3.jpg" alt="Изображение 3" class="slide">
+        <img src="pictures/image4.jpg" alt="Изображение 2" class="slide">
+        <img src="pictures/image5.jpg" alt="Изображение 3" class="slide">
+      </div>
+    <script src="./script2.js"></script>
+</body>
+</html>
