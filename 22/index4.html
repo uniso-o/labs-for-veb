@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>gey.by</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+    <style>
+  .switch-container {
+  position: relative;
+  width: 80px;
+  height: 40px;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+}
+
+.switch-button {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  border-radius: 20px;
+  background-color: #ddd;
+  color: #fff;
+  transition: left 0.3s ease-in-out;
+}
+
+.switch-on {
+  left: 0;
+  background-color: #2196F3;
+}
+
+.switch-off {
+  left: 40px;
+  background-color: #999;
+  color: #000;
+}
+      </style>
+</head>
+
+<body>
+    <div class="switch-container">
+        <div class="switch-button switch-on">ON</div>
+        <div class="switch-button switch-off">OFF</div>
+      </div>
+  <script >
+   
+   $(document).ready(function() {
+  $('.switch-button').click(function() {
+    $(this).siblings().toggleClass('switch-on switch-off');
+    $(this).toggleClass('switch-on switch-off');
+  });
+});
+</script>
+
+</body>
+</html>

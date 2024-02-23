@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>gey.by</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+    <style>
+        table {
+          border-collapse: collapse;
+        }
+        table, th, td {
+          border: 4px solid white;
+        }
+        th, td {
+          padding: 10px;
+          color: white;
+        }
+        th, tr :first-child {
+          background-color: rgb(24, 219, 161);
+        }
+        tr {
+            background-color: rgb(51, 194, 199);  
+        }
+      </style>
+</head>
+
+<body>
+  <P>HELOOOO</P>
+  <h1>hiiiii</h1>
+  <form></form>
+
+
+  <script >
+    console.log($('body').children());
+
+    $(document).ready(function() {
+    let table = $('<table>').addClass('table');
+    let tr1 = $('<tr>');
+    tr1.append($('<th>').text(''));
+    tr1.append($('<th >').text('PRESENT'));
+    tr1.append($('<th>').text('PAST'));
+    tr1.append($('<th>').text('FUTURE'));
+    table.append(tr1);
+
+    let el = $('<td>').text('+')
+    let tr2 = $('<tr>');
+    tr2.append(el);
+    tr2.append($('<td>').text('I dance'));
+    tr2.append($('<td>').text('I danced'));
+    tr2.append($('<td>').text('I will dance'));
+    table.append(tr2);
+
+    let tr3 = $('<tr>');
+    tr3.append($('<td >').text('-'));
+    tr3.append($('<td>').text("I don't dance"));
+    tr3.append($('<td>').text("I didn't dance"));
+    tr3.append($('<td>').text("I'll not dance"));
+    table.append(tr3);
+
+    let tr4 = $('<tr>');
+    tr4.append($('<td> ').text('?'));
+    tr4.append($('<td>').text('Do I dance?'));
+    tr4.append($('<td>').text('Did I dance?'));
+    tr4.append($('<td>').text('Will I dance?'));
+    table.append(tr4);
+
+    table.find('th').mouseover(function() {
+        let time = $(this).text();
+        let description;
+        switch (time) {
+            case 'PRESENT':
+                description = 'Действие происходит в настоящем времени';
+                break;
+            case 'PAST':
+                description = 'Действие уже произошло в прошлом времени';
+                break;
+            case 'FUTURE':
+                description = 'Действие произойдет в будущем времени';
+                break;
+            default:
+                description = '';
+        }
+        alert(description);
+    });
+
+    $('body').append(table);
+  });
+
+  
+</script>
+</body>
+</html>
+
+
