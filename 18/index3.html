@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+<a id="myLink" href="#" target="_blank">Ссылка</a><br><br>
+
+<button id="button1">google</button>
+<button id="button2">yandex</button>
+<button id="button3">opera</button>
+
+<script>
+document.addEventListener("DOMContentLoaded", function(event) { 
+  let link = document.getElementById("myLink");
+  let button1 = document.getElementById("button1");
+  let button2 = document.getElementById("button2");
+  let button3 = document.getElementById("button3");
+
+  button1.addEventListener("click", function() {
+    link.setAttribute("href", "https://www.google.com/");
+  });
+
+  button2.onclick = function() {
+    link.href = "https://yandex.ru/";
+  };
+
+  button3.addEventListener("click", function() {
+    link.href = "https://www.opera.com/";
+  });
+});
+</script>
+</body>
+</html>
