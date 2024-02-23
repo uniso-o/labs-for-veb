@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>gey.by</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+      </style>
+</head>
+<body>
+    <h1>Вход</h1>
+    <form id="myForm">
+        <label for="name">Имя:</label>
+        <input type="text" id="name" name="name" required><br>
+<br><br>
+        <label for="email">Почта:</label>
+        <input type="email" id="email" name="email" required><br>
+        <br><br>
+        <label for="message">Сообщение:</label>
+        <textarea id="message" name="message" required></textarea><br>
+        <br><br>
+        <input type="submit" value="Submit">
+    </form>
+    <script>
+        $(document).ready(function() {
+            $('#myForm').submit(function(event) {
+                let emptyFields = [];
+                $(this).find('input, textarea').each(function() {
+                    if ($(this).val() === '') {
+                        emptyFields.push($(this).attr('name'));
+                    }
+                });
+
+        
+                if (emptyFields.length > 0) {
+                    event.preventDefault(); 
+                    alert('Please fill in all fields: ' + emptyFields.join(', '));
+                }
+            });
+        });
+     
+    </script>
+</body>
+</html>
